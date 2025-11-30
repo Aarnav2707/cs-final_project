@@ -1,4 +1,6 @@
 import csv
+#Class containing all the pollution data
+#Note: convert certain variables (date, dissolvedoxygen, and watertemp) to floats if needed because they are set as strings in the class.
 class PollutionRecord:
     def __init__(self, location: str, date: str, dissolvedoxygen: str, watertemp: str):
         self.location = location

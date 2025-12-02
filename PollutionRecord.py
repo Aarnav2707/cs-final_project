@@ -20,7 +20,5 @@ def get_pollution_data(file) -> list[PollutionRecord]:
                     water_pollution = PollutionRecord(row[8], row[10], row[5], row[15])
                     results.append(water_pollution)
     return results
-    #print(results)
 
-#Prints results of get_pollution_data
 get_pollution_data("field_results_sb.csv")

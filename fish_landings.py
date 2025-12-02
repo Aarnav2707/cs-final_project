@@ -30,5 +30,5 @@ def get_fish_landings_in_specified_year(year) -> list[FishLandings] | None:
         results.append(FishLandings(category, year, species, total_pounds))
     return results
 
-#print(get_fish_landings_in_specified_year(1981))
+
 

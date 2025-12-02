@@ -97,4 +97,5 @@ def threshold(correlation) -> str:
     return interpretation
 
 print(threshold(correlation_co))
+print("Easy Sustainability Tip: people can help by reducing fertilizer use at home.\nThis cuts personal nutrient runoff by 50% which supports healthier waters.")
 

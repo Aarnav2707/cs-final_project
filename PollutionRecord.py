@@ -16,7 +16,6 @@ def get_pollution_data(file) -> list[PollutionRecord]:
     with open(file, "r") as f:
         reader = csv.reader(f)
         for row in reader:
-            for i in row:
                 if row[8] == 'Santa Barbara':
                     water_pollution = PollutionRecord(row[8], row[10], row[5], row[15])
                     results.append(water_pollution)

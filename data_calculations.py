@@ -9,7 +9,7 @@ def average_fish_landings_per_year(category):
         for j in lst:
             if j.category == category:
                 total+=j.pounds
-    return total/22
+    return total/23
 
 average = average_fish_landings_per_year(category)
 print(f"average {category} landings per year for {category} is {average_fish_landings_per_year(category)}")

@@ -68,11 +68,8 @@ def pearson(category):
         oxygen_values.append(average_oxygen_level_in_year(year, category))
     r, _ = pearsonr(fish_values, oxygen_values)
     return r
-
 print(f"the pearson correlation coefficient is {pearson(category)}")
-
 correlation_co = pearson(category)
-
 def threshold(correlation) -> str:
     interpretation = ""
     if 0.75 < correlation <= 1:
@@ -96,7 +93,7 @@ def threshold(correlation) -> str:
     else:
         return "Error: invalid parameter (must be between -1 and 1 inclusive)"
 
-    interpretation += f". Its important to not that correlation does not equal causation. \nThere are many other factors that could lead to changes in fish population. For example, fishing effort, species migration, seasonal cycles, habitat changes, and more.\nAlthough our data suggests a {interpretation}, it does not mean that lower oxygen levels cause a lower fish population even though lower oxygen levels are indicative of higher pollution."
+    interpretation += f". Its important to not that correlation does not equal causation. \nThere are many other factors that could lead to changes in fish population. For example, fishing effort, species migration, seasonal cycles, habitat changes, and more.\nAlthough our data suggests a {interpretation}, it does not mean that lower oxygen levels cause a lower fish population even though lower oxygen levels \nare indicative of higher pollution."
     return interpretation
 
 print(threshold(correlation_co))

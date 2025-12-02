@@ -24,16 +24,11 @@ def get_fish_landings_in_specified_year(year) -> list[FishLandings] | None:
         category = row["Category"]
         species = row["Species"]
         total_pounds = 0
-        valid_row = True
         for month in data_table.columns[2:]:
-            if row[month] == 'Confidential' or row[month] == 0:
-                valid_row = False
-                break
-            else:
+            if row[month] != 'Confidential':
                 total_pounds += row[month]
-        if valid_row:
-            results.append(FishLandings(category, year, species, total_pounds))
+        results.append(FishLandings(category, year, species, total_pounds))
     return results
 
-print(get_fish_landings_in_specified_year(1981))
+#print(get_fish_landings_in_specified_year(1981))
 
